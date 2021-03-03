@@ -1,10 +1,14 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
-  const [date, setDate] = useState(null);
   useEffect(() => {
+    AOS.init({
+      duration: 750,
+      once: true
+    })
     async function getDate() {
       const res = await fetch('/api/date');
       const newDate = await res.text();
