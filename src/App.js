@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import Particles from './components/layouts/Particles';
+import Header from './components/pages/Header';
+import About from './components/pages/About';
+import Works from './components/pages/Works';
+import Contact from './components/pages/Contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,7 +16,11 @@ function App() {
   }, []);
   return (
     <div className="App">
-      
+      <Header />
+      <Particles />
+      <About />
+      <Works />
+      <Contact />
     </div>
   );
 }
