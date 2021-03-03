@@ -28,18 +28,38 @@ const Header = () => {
         }
 
     return (
-        <div>
-            <div className="Header">
-                <h1>{ `I'm ${header.name}` }</h1>
-            <p className="line-1 anim-typewriter">and this is my portfolio... </p>
-            <label className="switch">
-                <input id="mode-switch" onClick={toggleDarkMode} type="checkbox"/>
-                <span className="slider round"></span>
-            </label>
-            <HeaderButton/>
+        // <div>
+        //     <div className="Header">
+        //         <h1>{ `I'm ${header.name}` }</h1>
+        //     <p className="line-1 anim-typewriter">and this is my portfolio... </p>
+        //     <label className="switch">
+        //         <input id="mode-switch" onClick={toggleDarkMode} type="checkbox"/>
+        //         <span className="slider round"></span>
+        //     </label>
+        //     <HeaderButton/>
+        //     </div>
+        //     <img id="not-dark" onClick={scrollTo} alt="Go to top" title="Go to top" className="gtp" src="profile.png"></img>
+        // </div>
+        <nav class="site-nav js-site-navbar mb-5 site-navbar-target">
+            <div class="container">
+                <div class="site-navigation text-center">
+                    <a href="index.html" class="d-block text-center float-left logo">KHW</a>
+                    <ul class="js-clone-nav ml-0 pl-0 d-none d-lg-inline-block site-menu mx-auto text-center">
+                        <li class="active"><a href="#home-section" class="nav-link active">Home</a></li>
+                        <li><a href="#about-section" class="nav-link">About</a></li>
+                        <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+                        <li><a href="#services-section" class="nav-link">Services</a></li>
+                        <li><a href="#resume-section" class="nav-link">Resume</a></li>
+                        <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    </ul>
+                    <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block light d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
+                </div>
             </div>
             <img id="not-dark" onClick={scrollTo} alt="Go to top" title="Go to top" className="gtp" src="profile.png"></img>
-        </div>
+        </nav>
     )
     
 }
