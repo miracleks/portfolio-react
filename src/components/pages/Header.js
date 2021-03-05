@@ -1,15 +1,13 @@
 import React from 'react';
 import HeaderButton from '../layouts/HeaderButton'
 import { header } from '../../profile'
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 const Header = () => {
 
     const scrollTo = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        })
+        scroll.scrollToTop();
     }
 
     const toggleDarkMode = () =>  {
@@ -40,20 +38,20 @@ const Header = () => {
         //     </div>
         //     <img id="not-dark" onClick={scrollTo} alt="Go to top" title="Go to top" className="gtp" src="profile.png"></img>
         // </div>
-        <nav class="site-nav js-site-navbar mb-5 site-navbar-target">
-            <div class="container">
-                <div class="site-navigation text-center">
-                    <a href="index.html" class="d-block text-center float-left logo">KHW</a>
-                    <ul class="js-clone-nav ml-0 pl-0 d-none d-lg-inline-block site-menu mx-auto text-center">
-                        <li class="active"><a href="#home-section" class="nav-link active">Home</a></li>
-                        <li><a href="#about-section" class="nav-link">About</a></li>
-                        <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                        <li><a href="#services-section" class="nav-link">Services</a></li>
-                        <li><a href="#resume-section" class="nav-link">Resume</a></li>
-                        <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+        <nav className="site-nav js-site-navbar mb-5 site-navbar-target">
+            <div className="container">
+                <div className="site-navigation text-center">
+                    <a href="index.html" className="d-block text-center float-left logo">KHW</a>
+                    <ul className="js-clone-nav ml-0 pl-0 d-none d-lg-inline-block site-menu mx-auto text-center">
+                        <li><Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} className="nav-link active">Home</Link></li>
+                        <li><Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500} className="nav-link">About</Link></li>
+                        <li><Link activeClass="active" to="portfolio" spy={true} smooth={true} offset={50} duration={500} className="nav-link">Portfolio</Link></li>
+                        <li><Link activeClass="active" to="services" spy={true} smooth={true} offset={50} duration={500} className="nav-link">Services</Link></li>
+                        <li><Link activeClass="active" to="resume" spy={true} smooth={true} offset={50} duration={500} className="nav-link">Resume</Link></li>
+                        <li><Link activeClass="active" to="blog" spy={true} smooth={true} offset={50} duration={500} className="nav-link">Blog</Link></li>
+                        <li><Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} className="nav-link">Contact</Link></li>
                     </ul>
-                    <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block light d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+                    <a href="#" className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block light d-lg-none" data-toggle="collapse" data-target="#main-navbar">
                         <span></span>
                     </a>
                 </div>

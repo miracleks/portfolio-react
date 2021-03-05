@@ -5,3 +5,7 @@
     --primary-color:  #e96224;
     --hover-color:  #ff6600;
 }
+
+body {
+    cursor: default !important;
+}
